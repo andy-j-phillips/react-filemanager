@@ -28,6 +28,8 @@ export default {
     typescript({ tsconfig: './tsconfig.json' }),
     postcss({
       modules: true,
+      extract: 'styles.css',
+      use: ['sass'],
     }),
     terser(),
   ],

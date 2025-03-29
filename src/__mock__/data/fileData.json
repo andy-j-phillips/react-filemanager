@@ -1,0 +1,114 @@
+{
+  "id": 1,
+  "name": "home",
+  "path": "home",
+  "type": "directory",
+  "date_modified": "2024-07-20",
+  "size": 0,
+  "kind": "folder",
+  "children": [
+    {
+      "id": 2,
+      "name": "documents",
+      "path": "home/documents",
+      "type": "directory",
+      "date_modified": "2024-07-20",
+      "size": 0,
+      "kind": "folder",
+      "children": [
+        {
+          "id": 3,
+          "name": "report.txt",
+          "path": "home/documents/report.txt",
+          "type": "file",
+          "date_modified": "2024-07-21",
+          "size": 12,
+          "kind": "txt",
+          "children": []
+        },
+        {
+          "id": 4,
+          "name": "images",
+          "path": "home/documents/images",
+          "type": "directory",
+          "date_modified": "2024-07-21",
+          "size": 0,
+          "kind": "folder",
+          "children": [
+            {
+              "id": 5,
+              "name": "photo1.jpg",
+              "path": "home/documents/images/photo1.jpg",
+              "type": "file",
+              "date_modified": "2024-07-22",
+              "size": 256,
+              "kind": "jpg",
+              "children": []
+            },
+            {
+              "id": 6,
+              "name": "photo2.png",
+              "path": "home/documents/images/photo2.png",
+              "type": "file",
+              "date_modified": "2024-07-22",
+              "size": 128,
+              "kind": "png",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "presentation.pptx",
+          "path": "home/documents/presentation.pptx",
+          "type": "file",
+          "date_modified": "2024-07.23",
+          "size": 1024,
+          "kind": "pptx",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "downloads",
+      "path": "home/downloads",
+      "type": "directory",
+      "date_modified": "2024-07-24",
+      "size": 0,
+      "kind": "folder",
+      "children": [
+        {
+          "id": 9,
+          "name": "software.exe",
+          "path": "home/downloads/software.exe",
+          "type": "file",
+          "date_modified": "2024-07-25",
+          "size": 2048,
+          "kind": "exe",
+          "children": []
+        },
+        {
+          "id": 10,
+          "name": "archive.zip",
+          "path": "home/downloads/archive.zip",
+          "type": "file",
+          "date_modified": "2024-07-25",
+          "size": 512,
+          "kind": "zip",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "config.json",
+      "path": "home/config.json",
+      "type": "file",
+      "date_modified": "2024-07-26",
+      "size": 64,
+      "kind": "json",
+      "children": []
+    }
+  ]
+}

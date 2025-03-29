@@ -5,6 +5,7 @@ const config: StorybookConfig = {
     "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
+
   "addons": [
     "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-essentials",
@@ -12,9 +13,25 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions"
   ],
+
   "framework": {
     "name": "@storybook/react-webpack5",
     "options": {}
-  }
+  },
+
+  docs: {
+    autodocs: true
+  },
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript"
+  },
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+    });
+    return config;
+  },
 };
 export default config;
