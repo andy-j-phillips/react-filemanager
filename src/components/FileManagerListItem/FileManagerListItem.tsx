@@ -12,8 +12,9 @@ type FilemanagerItemProps = {
 const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
   const dispatch = useDispatch();
   const handleDoubleClick = () => {
+    console.log(item)
     if (item.type === 'directory') {
-      dispatch((state) => ({ directory: item }));
+      dispatch(() => ({ directory: item }));
     } else {
       alert('File clicked'); // TODO
     }
