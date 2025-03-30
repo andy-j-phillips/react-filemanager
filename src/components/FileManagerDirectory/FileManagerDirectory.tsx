@@ -1,6 +1,8 @@
 import React from 'react';
 import { DirectoryItem } from '../../types'
-import styles from './fileManagerDirectory.module.scss'
+import styles from './fileManagerDirectory.module.scss';
+
+console.log(styles); // Add this line
 
 export type FileManagerDirectoryProps = {
   directory: DirectoryItem;
