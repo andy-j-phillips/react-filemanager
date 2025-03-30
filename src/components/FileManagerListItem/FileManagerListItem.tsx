@@ -1,10 +1,32 @@
 import React from 'react';
+import { FileManagerItem, Args } from '../../types';
+import setDirectoryEffect from '../../store/effects/setDirectoryEffect';
+import { useProviderContext } from '../../store/Provider';
+import { useDispatch } from '../../store/dispatch';
 
-const FilemanagerItem = () => {
+type FilemanagerItemProps = {
+  item: FileManagerItem;
+  displayColumns: Args['displayColumns'];
+};
+
+const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
+  const dispatch = useDispatch();
+  const handleDoubleClick = () => {
+    if (item.type === 'directory') {
+      dispatch((state) => ({ directory: item }));
+    } else {
+      alert('File clicked'); // TODO
+    }
+  };
+
   return (
-    <div>
-      <h1>File Manager Item</h1>
-      {/* File manager item implementation goes here */}
-    </div>
+    <li onDoubleClick={handleDoubleClick}>
+      <div>{item.name}</div>
+      {displayColumns.map((column) => (
+        <div key={column}>{item[column]}</div>
+      ))}
+    </li>
   );
 };
+
+export default FilemanagerItem;

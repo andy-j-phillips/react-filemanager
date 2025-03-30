@@ -1,26 +1,18 @@
 import React from 'react';
-import { DirectoryItem } from '../../types'
-import styles from './fileManagerDirectory.module.scss';
+import { DirectoryItem, Args } from '../../types';
+import FileManagerListItem from '../FileManagerListItem';
+import { getState } from '../../store/Provider';
+// import styles from './fileManagerDirectory.scss';
 
-console.log(styles); // Add this line
+// console.log(styles); // Add this line
 
-export type FileManagerDirectoryProps = {
-  directory: DirectoryItem;
-  displayColumns: string[];
-};
-
-const FileManagerDirectory = ({ directory, displayColumns }: FileManagerDirectoryProps) => {
-  console.log(directory)
+const FileManagerDirectory = () => {
+  const { directory, displayColumns } = getState();
   return (
     <div>
       {directory.children.map((item) => (
         <ul key={item.id}>
-          <li className={styles.fileManagerDirectoryListItem}>
-            <div>{item.name}</div>
-            {displayColumns.map((column) => (
-              <div key={column}>{item[column]}</div>
-            ))}
-          </li>
+          <FileManagerListItem key={item.id} item={item} displayColumns={displayColumns} />
         </ul>
       ))}
     </div>

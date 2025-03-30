@@ -13,4 +13,8 @@ export type DirectoryItem = FileDirectoryBaseItem & {
   type: 'directory';
 };
 
-type FileManagerItem = FileItem | DirectoryItem;
+export type FileManagerItem = FileItem | DirectoryItem;
+
+export type Args = {
+  displayColumns: string[];
+};

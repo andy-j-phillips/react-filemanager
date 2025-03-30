@@ -1,19 +1,19 @@
 import React from 'react';
-import fileData from '../../__mock__/data/fileData';
-import { DirectoryItem } from '../../types'
 import FilemanagerDirectory, { FileManagerDirectoryProps } from '../FileManagerDirectory';
-
-
+import { Provider } from '../../store/Provider';
 
 const Filemanager = (props: FileManagerDirectoryProps) => {
-
   return (
-    <FilemanagerDirectory {...props} />
+    <Provider
+      initialValue={{
+        directory: props.directory,
+        displayColumns: props.displayColumns,
+      }}
+    >
+      <FilemanagerDirectory />
+    </Provider>
   );
 };
 
-const ConsumedFilemanager = () => {
-  return < Filemanager directory={fileData} displayColumns={['date_modified', 'size', 'kind']} />
-}
 
-export default ConsumedFilemanager;
+export default Filemanager;
