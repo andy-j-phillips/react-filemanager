@@ -1,18 +1,18 @@
 // MyContext.js
-import React, { createContext, useState, use } from 'react';
+import  { createContext, useState, use } from 'react';
 
 export const ProviderContext = createContext(null);
 
 export const Provider = ({ children, initialValue }) => {
   const [state, setState] = useState(initialValue);
 
-  const updateState = (setter) => {
+  const setContextState = (setter) => {
     setState(setter);
   };
 
   const value = {
     state,
-    updateState,
+    setContextState,
   };
 
   return <ProviderContext.Provider value={value}>{children}</ProviderContext.Provider>;

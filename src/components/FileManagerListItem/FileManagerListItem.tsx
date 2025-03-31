@@ -1,8 +1,6 @@
-import React from 'react';
 import { FileManagerItem, Args } from '../../types';
-import setDirectoryEffect from '../../store/effects/setDirectoryEffect';
-import { useProviderContext } from '../../store/Provider';
 import { useDispatch } from '../../store/dispatch';
+import styles from './FileManagerListItem.module.scss';
 
 type FilemanagerItemProps = {
   item: FileManagerItem;
@@ -12,7 +10,7 @@ type FilemanagerItemProps = {
 const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
   const dispatch = useDispatch();
   const handleDoubleClick = () => {
-    console.log(item)
+    console.log(item);
     if (item.type === 'directory') {
       dispatch(() => ({ directory: item }));
     } else {
@@ -21,7 +19,7 @@ const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
   };
 
   return (
-    <li onDoubleClick={handleDoubleClick}>
+    <li className={styles.fileManagerListItem} onDoubleClick={handleDoubleClick}>
       <div>{item.name}</div>
       {displayColumns.map((column) => (
         <div key={column}>{item[column]}</div>

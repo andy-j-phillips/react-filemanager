@@ -27,10 +27,12 @@ const config: StorybookConfig = {
         {
           loader: 'css-loader',
           options: {
-            modules: true,
+            modules: {
+              namedExport: false,
+              exportLocalsConvention: 'as-is',
+            }
           },
         },
-        'postcss-loader',
         'sass-loader',
       ],
     });
@@ -38,8 +40,11 @@ const config: StorybookConfig = {
     config.module.rules.push({
       test: /\.scss$/,
       exclude: /\.module\.scss$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      use: ['style-loader', 'css-loader', 'sass-loader'],
     });
+
+      // Add a console.dir to inspect the webpack config.
+  console.dir(config.module.rules, { depth: null });
 
     return config;
   },

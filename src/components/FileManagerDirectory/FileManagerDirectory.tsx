@@ -1,10 +1,5 @@
-import React from 'react';
-import { DirectoryItem, Args } from '../../types';
 import FileManagerListItem from '../FileManagerListItem';
 import { getState } from '../../store/Provider';
-// import styles from './fileManagerDirectory.scss';
-
-// console.log(styles); // Add this line
 
 const FileManagerDirectory = () => {
   const { directory, displayColumns } = getState();

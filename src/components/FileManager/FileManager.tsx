@@ -1,5 +1,5 @@
-import React from 'react';
 import FilemanagerDirectory, { FileManagerDirectoryProps } from '../FileManagerDirectory';
+import Toolbar from '../Toolbar';
 import { Provider } from '../../store/Provider';
 
 const Filemanager = (props: FileManagerDirectoryProps) => {
@@ -10,10 +10,10 @@ const Filemanager = (props: FileManagerDirectoryProps) => {
         displayColumns: props.displayColumns,
       }}
     >
+      <Toolbar />
       <FilemanagerDirectory />
     </Provider>
   );
 };
-
 
 export default Filemanager;

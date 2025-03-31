@@ -1,4 +1,4 @@
-.fileManagerDirectoryListItem {
+.fileManagerListItem {
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -13,8 +13,11 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
     color: #333;
-    cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
+    div {
+        cursor: arrow;
+    }
 
     &:hover {
         background-color: #c5d9ee;
