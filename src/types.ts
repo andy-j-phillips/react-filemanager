@@ -15,6 +15,9 @@ export type DirectoryItem = FileDirectoryBaseItem & {
 
 export type FileManagerItem = FileItem | DirectoryItem;
 
-export type Args = {
-  displayColumns: string[];
+export type DisplayColumns = string[];
+
+export type Store = {
+  directory: DirectoryItem | null;
+  displayColumns: DisplayColumns;
 };

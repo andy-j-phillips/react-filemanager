@@ -2,7 +2,9 @@ import FilemanagerDirectory, { FileManagerDirectoryProps } from '../FileManagerD
 import Toolbar from '../Toolbar';
 import { Provider } from '../../store/Provider';
 
-const Filemanager = (props: FileManagerDirectoryProps) => {
+type FilemanagerProps = FileManagerDirectoryProps;
+
+const Filemanager = (props: FilemanagerProps) => {
   return (
     <Provider
       initialValue={{

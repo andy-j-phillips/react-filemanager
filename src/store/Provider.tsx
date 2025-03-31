@@ -1,12 +1,31 @@
-// MyContext.js
-import  { createContext, useState, use } from 'react';
+import { createContext, useState, use, ReactNode } from 'react';
+import { Store } from '../types';
 
-export const ProviderContext = createContext(null);
+type TProviderContext = {
+  setContextState: React.Dispatch<React.SetStateAction<Store>>;
+  state: Store;
+};
 
-export const Provider = ({ children, initialValue }) => {
+const DEFAULT_STATE = {
+  directory: null,
+  displayColumns: [],
+};
+
+export const ProviderContext = createContext<TProviderContext>({
+  setContextState: () => {},
+  state: DEFAULT_STATE,
+});
+
+export const Provider = ({
+  children,
+  initialValue,
+}: {
+  children: ReactNode;
+  initialValue: Store;
+}) => {
   const [state, setState] = useState(initialValue);
 
-  const setContextState = (setter) => {
+  const setContextState = (setter: (state: Store) => Store) => {
     setState(setter);
   };
 

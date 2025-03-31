@@ -1,10 +1,10 @@
-import { FileManagerItem, Args } from '../../types';
+import { FileManagerItem, DisplayColumns } from '../../types';
 import { useDispatch } from '../../store/dispatch';
 import styles from './FileManagerListItem.module.scss';
 
 type FilemanagerItemProps = {
   item: FileManagerItem;
-  displayColumns: Args['displayColumns'];
+  displayColumns: DisplayColumns;
 };
 
 const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
