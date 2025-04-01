@@ -1,14 +1,10 @@
 import { createContext, useState, use, ReactNode } from 'react';
 import { Store } from '../types';
+import { DEFAULT_STATE } from './consts';
 
 type TProviderContext = {
   setContextState: React.Dispatch<React.SetStateAction<Store>>;
   state: Store;
-};
-
-const DEFAULT_STATE = {
-  directory: null,
-  displayColumns: [],
 };
 
 export const ProviderContext = createContext<TProviderContext>({

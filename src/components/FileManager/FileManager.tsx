@@ -1,8 +1,12 @@
-import FilemanagerDirectory, { FileManagerDirectoryProps } from '../FileManagerDirectory';
+import FilemanagerDirectory from '../Directory';
 import Toolbar from '../Toolbar';
 import { Provider } from '../../store/Provider';
+import { DirectoryItem, DisplayColumns } from '../../types';
 
-type FilemanagerProps = FileManagerDirectoryProps;
+type FilemanagerProps = {
+  directory: DirectoryItem;
+  displayColumns: DisplayColumns;
+};
 
 const Filemanager = (props: FilemanagerProps) => {
   return (

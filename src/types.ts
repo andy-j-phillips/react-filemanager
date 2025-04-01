@@ -1,7 +1,7 @@
 type FileDirectoryBaseItem = {
   id: number | string;
   name: string;
-  path: [string];
+  path: string[];
 };
 
 type FileItem = FileDirectoryBaseItem & {
@@ -9,15 +9,16 @@ type FileItem = FileDirectoryBaseItem & {
 };
 
 export type DirectoryItem = FileDirectoryBaseItem & {
-  children: (DirectoryItem | FileItem)[];
+  children: FileManagerItem[];
   type: 'directory';
 };
-
-export type FileManagerItem = FileItem | DirectoryItem;
-
 export type DisplayColumns = string[];
 
+export type FileManagerItemColumns = Record<DisplayColumns[number], string | number | undefined>;
+
+export type FileManagerItem = FileItem | (DirectoryItem & FileManagerItemColumns);
+
 export type Store = {
-  directory: DirectoryItem | null;
+  directory: DirectoryItem;
   displayColumns: DisplayColumns;
 };

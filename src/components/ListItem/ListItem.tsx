@@ -19,10 +19,10 @@ const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
   };
 
   return (
-    <li className={styles.fileManagerListItem} onDoubleClick={handleDoubleClick}>
+    <li className={styles.listItem} onDoubleClick={handleDoubleClick}>
       <div>{item.name}</div>
       {displayColumns.map((column) => (
-        <div key={column}>{item[column]}</div>
+        <div key={column}>{item.hasOwnProperty(column) && item[column]}</div>
       ))}
     </li>
   );
