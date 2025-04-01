@@ -9,6 +9,7 @@ type FileManagerProps = {
 };
 
 const FileManager = (props: FileManagerProps) => {
+  console.log(2);
   return (
     <Provider
       initialValue={{

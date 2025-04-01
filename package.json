@@ -10,7 +10,6 @@
     "dist"
   ],
   "scripts": {
-    "prepare": "husky install",
     "build": "NODE_ENV=production rollup -c",
     "storybook": "NODE_ENV=development storybook dev -p 6006",
     "build-storybook": "NODE_ENV=production storybook build",
