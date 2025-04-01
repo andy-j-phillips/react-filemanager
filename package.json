@@ -16,7 +16,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
     "ts:check": "tsc --noEmit --incremental false",
-    "checks": "yarn format:check && ts:check"
+    "checks": "yarn format:check && ts:check",
+    "prepare": "husky install"
   },
   "peerDependencies": {
     "react": "^19.1.0"
@@ -43,7 +44,7 @@
     "@types/node": "^22.13.14",
     "@types/react": "^19.0.12",
     "css-loader": "^7.1.2",
-    "husky": "^9.1.7",
+    "husky": "^8.0.0",
     "jest": "^29.7.0",
     "prettier": "^3.5.3",
     "rollup": "^4.38.0",
