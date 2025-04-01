@@ -9,7 +9,7 @@ type FileItem = FileDirectoryBaseItem & {
 };
 
 export type DirectoryItem = FileDirectoryBaseItem & {
-      children: FileManagerItem[];
+  children: FileManagerItem[];
   type: 'directory';
 };
 export type DisplayColumns = string[];

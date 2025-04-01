@@ -24,7 +24,7 @@ const ListItem = ({ item }: ListItemProps) => {
       <div>{item.name}</div>
       {displayColumns.map((column) => (
         // TODO Fix any here
-        <div key={column}>{item.hasOwnProperty(column) && (item as any)[column]}</div>
+        <div key={column}>{item.hasOwnProperty(column) && item[column]}</div>
       ))}
     </li>
   );
