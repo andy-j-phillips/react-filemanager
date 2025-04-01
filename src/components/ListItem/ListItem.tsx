@@ -23,7 +23,7 @@ const ListItem = ({ item }: ListItemProps) => {
     <li className={styles.listItem} onDoubleClick={handleDoubleClick}>
       <div>{item.name}</div>
       {displayColumns.map((column) => (
-        <div key={column}>{item.hasOwnProperty(column) && item[column]}</div>
+        <div key={column}>{item.hasOwnProperty(column) && (item as any)[column]}</div>
       ))}
     </li>
   );
