@@ -16,8 +16,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
     "ts:check": "npx tsc --noEmit --incremental false",
-    "checks": "yarn format:check && ts:check",
-    "prepare": "husky install"
+    "checks": "yarn format:check && yarn ts:check"
   },
   "peerDependencies": {
     "react": "^19.1.0"
