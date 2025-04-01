@@ -3,12 +3,12 @@ import Toolbar from '../Toolbar';
 import { Provider } from '../../store/Provider';
 import { DirectoryItem, DisplayColumns } from '../../types';
 
-type FilemanagerProps = {
+type FileManagerProps = {
   directory: DirectoryItem;
   displayColumns: DisplayColumns;
 };
 
-const Filemanager = (props: FilemanagerProps) => {
+const FileManager = (props: FileManagerProps) => {
   return (
     <Provider
       initialValue={{
@@ -22,4 +22,4 @@ const Filemanager = (props: FilemanagerProps) => {
   );
 };
 
-export default Filemanager;
+export default FileManager;

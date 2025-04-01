@@ -1,4 +1,4 @@
-import { createContext, useState, use, ReactNode } from 'react';
+import { createContext, useState, useContext, ReactNode } from 'react';
 import { Store } from '../types';
 import { DEFAULT_STATE } from './consts';
 
@@ -21,8 +21,10 @@ export const Provider = ({
 }) => {
   const [state, setState] = useState(initialValue);
 
-  const setContextState = (setter: (state: Store) => Store) => {
-    setState(setter);
+  const setContextState: React.Dispatch<React.SetStateAction<Store>> = (
+    newStateOrSetter: React.SetStateAction<Store>,
+  ) => {
+    setState(newStateOrSetter);
   };
 
   const value = {
@@ -34,7 +36,7 @@ export const Provider = ({
 };
 
 export const useProviderContext = () => {
-  const context = use(ProviderContext);
+  const context = useContext(ProviderContext);
   if (!context) {
     throw new Error('useProviderContext must be used within a Provider');
   }

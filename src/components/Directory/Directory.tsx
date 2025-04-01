@@ -1,15 +1,15 @@
-import FileManagerListItem from '../ListItem';
-import { getState } from '../../store/Provider';
+import ListItem from '../ListItem';
+import directorySelector from '../../store/selectors/directorySelector';
 
-const FileManagerDirectory = () => {
-  const { directory, displayColumns } = getState();
+const Directory = () => {
+  const directory = directorySelector();
   return (
     <ul>
       {directory.children.map((item) => (
-        <FileManagerListItem key={item.id} item={item} displayColumns={displayColumns} />
+        <ListItem key={item.id} item={item} />
       ))}
     </ul>
   );
 };
 
-export default FileManagerDirectory;
+export default Directory;

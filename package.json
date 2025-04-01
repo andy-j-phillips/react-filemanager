@@ -1,5 +1,5 @@
 {
-  "name": "filemanager",
+  "name": "react-filemanager",
   "version": "1.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "husky install",
     "build": "NODE_ENV=production rollup -c",
     "storybook": "NODE_ENV=development storybook dev -p 6006",
     "build-storybook": "NODE_ENV=production storybook build",
@@ -43,6 +44,7 @@
     "@types/node": "^22.13.14",
     "@types/react": "^19.0.12",
     "css-loader": "^7.1.2",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "prettier": "^3.5.3",
     "rollup": "^4.38.0",
@@ -55,5 +57,11 @@
     "style-loader": "^4.0.0",
     "tsc": "^2.0.4",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn checks"
+    }
   }
 }

@@ -1,16 +1,17 @@
 import { FileManagerItem, DisplayColumns } from '../../types';
 import { useDispatch } from '../../store/dispatch';
-import styles from './FileManagerListItem.module.scss';
+import styles from './ListItem.module.scss';
+import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
 
-type FilemanagerItemProps = {
+type ListItemProps = {
   item: FileManagerItem;
-  displayColumns: DisplayColumns;
 };
 
-const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
+const ListItem = ({ item }: ListItemProps) => {
+  const displayColumns = displayColumnsSelector();
   const dispatch = useDispatch();
+
   const handleDoubleClick = () => {
-    console.log(item);
     if (item.type === 'directory') {
       dispatch(() => ({ directory: item }));
     } else {
@@ -28,4 +29,4 @@ const FilemanagerItem = ({ item, displayColumns }: FilemanagerItemProps) => {
   );
 };
 
-export default FilemanagerItem;
+export default ListItem;
