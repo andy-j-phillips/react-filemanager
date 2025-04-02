@@ -10,7 +10,6 @@ type FileManagerProps = {
 };
 
 const FileManager = (props: FileManagerProps) => {
-
   return (
     <div className={styles.fileManager}>
       <Provider
