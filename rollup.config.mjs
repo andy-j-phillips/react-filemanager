@@ -4,8 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
+import packageJson from './package.json' with { type: 'json' };;
 
-const packageJson = require('./package.json');
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default {

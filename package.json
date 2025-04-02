@@ -1,13 +1,21 @@
 {
-  "name": "react-filemanager",
-  "version": "1.0.0",
-  "main": "dist/cjs/index.js",
+  "name": "@andy.j.phillips/react-filemanager",
+  "version": "0.0.1",
+  "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "repository": "https://github.com/andy-j-phillips/filemanager.git",
   "author": "andy-j-phillips <andy.j.phillips@outlook.com>",
   "license": "MIT",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "filemanager",
+    "file",
+    "folder",
+    "filesystem",
+    "storage"
   ],
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
