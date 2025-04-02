@@ -2,6 +2,7 @@ import FilemanagerDirectory from '../Directory';
 import Toolbar from '../Toolbar';
 import { Provider } from '../../store/Provider';
 import { DirectoryItem, DisplayColumns } from '../../types';
+import styles from './FileManager.module.scss';
 
 type FileManagerProps = {
   directory: DirectoryItem;
@@ -9,17 +10,18 @@ type FileManagerProps = {
 };
 
 const FileManager = (props: FileManagerProps) => {
-  console.log(2);
   return (
-    <Provider
-      initialValue={{
-        directory: props.directory,
-        displayColumns: props.displayColumns,
-      }}
-    >
-      <Toolbar />
-      <FilemanagerDirectory />
-    </Provider>
+    <div className={styles.fileManager}>
+      <Provider
+        initialValue={{
+          directory: props.directory,
+          displayColumns: props.displayColumns,
+        }}
+      >
+        <Toolbar />
+        <FilemanagerDirectory />
+      </Provider>
+    </div>
   );
 };
 
