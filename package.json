@@ -1,7 +1,7 @@
 {
   "name": "react-filemanager",
   "version": "1.0.0",
-  "main": "dist/cjs/index.js",
+  "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "repository": "https://github.com/andy-j-phillips/filemanager.git",
   "author": "andy-j-phillips <andy.j.phillips@outlook.com>",
