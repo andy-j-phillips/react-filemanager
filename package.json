@@ -1,5 +1,5 @@
 {
-  "name": "@andy.j.phillips/react-filemanager",
+  "name": "@solidblock/react-filemanager",
   "version": "0.0.1",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
