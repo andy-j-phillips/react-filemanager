@@ -12,7 +12,7 @@
 
 ### About
 
-A react base file manager plugin.
+A react based file manager plugin.
 
 ### Installation
 
