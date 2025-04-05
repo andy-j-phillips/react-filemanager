@@ -49,12 +49,12 @@ jobs:
         run: yarn install
 
       - name: Build Storybook
-        run: yarn build-storybook
+        run: yarn build-storybook --output-dir ./docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./storybook-static
+            publish_dir: ./docs
             publish_branch: gh-pages
             force_orphan: true
