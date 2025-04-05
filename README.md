@@ -1,5 +1,5 @@
 
-<h1 align="center">react-filemanager</h1>
+<h1 align="center">React Filemanager</h1>
 
 <div align="center">
 
