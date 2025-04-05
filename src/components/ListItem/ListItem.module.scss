@@ -1,10 +1,36 @@
-.listItem {
+.listItemBody,
+.listItemHeader {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 6px 0;
+  gap: 14px;
+  padding: 6px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  div {
+    cursor: default;
+  }
+}
 
-  &:odd {
-    background-color: #f9f9f9;
+.listItemBody {
+  &:nth-child(odd) {
+    background-color: #f3f3f3;
+  }
+}
+
+.listItemBodyIcon {
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+}
+
+.listItemHeader {
+  border-bottom: 1px solid #bebebe;
+  > div {
+    border-right: 1px solid #bebebe;
+
+    &:last-child {
+      border-right: none;
+    }
   }
 }
