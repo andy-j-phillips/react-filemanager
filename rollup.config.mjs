@@ -4,7 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
-import packageJson from './package.json' with { type: 'json' };;
+import packageJson from './package.json' with { type: 'json' };
+import svg from 'rollup-plugin-svg';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -32,6 +33,7 @@ export default {
       extract: isProduction ? 'styles.css' : false,
       use: ['sass'],
     }),
+    svg(),
     isProduction && terser(),
   ].filter(Boolean),
 };
