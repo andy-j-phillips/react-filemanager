@@ -14,6 +14,8 @@
 
 A react based file manager plugin.
 
+Full documentation can be found [here](https://andy-j-phillips.github.io/react-filemanager/).
+
 ### Installation
 
 For installation you can use the following:-
