@@ -1,5 +1,5 @@
-import { useSelector } from '../../store/Provider';
 import directorySelector from '../../store/selectors/directorySelector';
+import useSelector from '../../store/useSelector';
 import ListItem from '../ListItem';
 import ListHeaderItem from '../ListItem/ListHeaderItem';
 

@@ -7,6 +7,9 @@ export const DEFAULT_STATE: Store = {
     path: [],
     type: 'directory',
     children: [],
+    created_at: '',
+    kind: 'directory',
+    size: 0,
   },
   displayColumns: [],
 };

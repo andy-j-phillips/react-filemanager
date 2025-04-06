@@ -30,7 +30,8 @@
     "lint:stylelint:fix": "stylelint --fix './src/**/*.scss'",
     "lint": "yarn lint:eslint && yarn lint:stylelint",
     "lint:fix": "yarn lint:eslint:fix && yarn lint:stylelint:fix",
-    "checks": "yarn format:check && yarn ts:check && yarn lint"
+    "checks": "yarn format:check && yarn ts:check && yarn lint",
+    "checks:fix": "yarn format && yarn ts:check && yarn lint:fix"
   },
   "peerDependencies": {
     "react": "^19.1.0"

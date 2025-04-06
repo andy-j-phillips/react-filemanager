@@ -1,8 +1,8 @@
 import fileIcon from '../../assets/icons/file.svg';
 import folderIcon from '../../assets/icons/folder.svg';
 import { useDispatch } from '../../store/dispatch';
-import { useSelector } from '../../store/Provider';
 import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
+import useSelector from '../../store/useSelector';
 import { FileManagerItem } from '../../types';
 
 import styles from './ListItem.module.scss';

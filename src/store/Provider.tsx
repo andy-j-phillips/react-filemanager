@@ -44,7 +44,3 @@ export const useProviderContext = () => {
   }
   return context;
 };
-
-export const useSelector = (selector: (store: Store) => Partial<Store>) => {
-  return selector(useProviderContext().state);
-};
