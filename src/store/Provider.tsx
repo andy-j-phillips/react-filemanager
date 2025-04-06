@@ -1,5 +1,7 @@
-import { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode } from 'react';
+
 import { Store } from '../types';
+
 import { DEFAULT_STATE } from './consts';
 
 type TProviderContext = {
@@ -41,8 +43,4 @@ export const useProviderContext = () => {
     throw new Error('useProviderContext must be used within a Provider');
   }
   return context;
-};
-
-export const getState = () => {
-  return useProviderContext().state;
 };

@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import { useProviderContext } from './Provider';
 import { Store } from '../types';
+
+import { useProviderContext } from './Provider';
 
 type DispatchSetter = (store: Store) => Partial<Store>;
 
 export const useDispatch = () => {
-  const _ = useState(null);
   const providerContext = useProviderContext();
 
   return (setter: DispatchSetter) => {

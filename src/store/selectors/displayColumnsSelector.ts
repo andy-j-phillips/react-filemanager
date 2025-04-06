@@ -1,5 +1,5 @@
-import { getState } from '../../store/Provider';
+import { Store } from '../../types';
 
-const displayColumnsSelector = () => getState().displayColumns;
+const displayColumnsSelector = (store: Store) => store.displayColumns;
 
 export default displayColumnsSelector;

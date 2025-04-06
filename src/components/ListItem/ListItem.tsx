@@ -1,22 +1,25 @@
-import { FileManagerItem } from '../../types';
-import { useDispatch } from '../../store/dispatch';
-import styles from './ListItem.module.scss';
-import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
-import folderIcon from '../../assets/icons/folder.svg';
 import fileIcon from '../../assets/icons/file.svg';
+import folderIcon from '../../assets/icons/folder.svg';
+import { useDispatch } from '../../store/dispatch';
+import useSelector from '../../store/selector';
+import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
+import { FileManagerItem } from '../../types';
+
+import styles from './ListItem.module.scss';
 
 type ListItemProps = {
   item: FileManagerItem;
 };
 
 const ListItem = ({ item }: ListItemProps) => {
-  const displayColumns = displayColumnsSelector();
+  const displayColumns = useSelector(displayColumnsSelector);
   const dispatch = useDispatch();
 
   const handleDoubleClick = () => {
     if (item.type === 'directory') {
       dispatch(() => ({ directory: item }));
     } else {
+      // eslint-disable-next-line no-undef
       alert('File clicked'); // TODO
     }
   };
@@ -32,8 +35,7 @@ const ListItem = ({ item }: ListItemProps) => {
         {item.name}
       </div>
       {displayColumns.map((column) => (
-        // TODO Fix any here
-        <div key={column}>{item.hasOwnProperty(column) && (item as any)[column]}</div>
+        <div key={column}>{item[column]}</div>
       ))}
     </li>
   );

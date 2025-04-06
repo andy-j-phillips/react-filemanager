@@ -1,10 +1,12 @@
+import useSelector from '../../store/selector';
+import directorySelector from '../../store/selectors/directorySelector';
 import ListItem from '../ListItem';
 import ListHeaderItem from '../ListItem/ListHeaderItem';
-import directorySelector from '../../store/selectors/directorySelector';
+
 import styles from './Directory.module.scss';
 
 const Directory = () => {
-  const directory = directorySelector();
+  const directory = useSelector(directorySelector);
 
   return (
     <ul className={styles.directory}>
