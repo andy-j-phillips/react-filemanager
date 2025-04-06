@@ -7,6 +7,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
   div {
     cursor: default;
   }
@@ -26,6 +27,7 @@
 
 .listItemHeader {
   border-bottom: 1px solid #bebebe;
+
   > div {
     border-right: 1px solid #bebebe;
 

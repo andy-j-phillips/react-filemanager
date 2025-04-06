@@ -1,5 +1,6 @@
-import styles from './ListItem.module.scss';
 import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
+
+import styles from './ListItem.module.scss';
 
 const ListHeaderItem = () => {
   const displayColumns = displayColumnsSelector();

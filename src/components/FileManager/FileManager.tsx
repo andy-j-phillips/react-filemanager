@@ -1,7 +1,8 @@
-import FilemanagerDirectory from '../Directory';
-import Toolbar from '../Toolbar';
 import { Provider } from '../../store/Provider';
 import { DirectoryItem, DisplayColumns } from '../../types';
+import FilemanagerDirectory from '../Directory';
+import Toolbar from '../Toolbar';
+
 import styles from './FileManager.module.scss';
 
 export type FileManagerProps = {

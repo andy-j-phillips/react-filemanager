@@ -1,9 +1,10 @@
-import { FileManagerItem } from '../../types';
-import { useDispatch } from '../../store/dispatch';
-import styles from './ListItem.module.scss';
-import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
-import folderIcon from '../../assets/icons/folder.svg';
 import fileIcon from '../../assets/icons/file.svg';
+import folderIcon from '../../assets/icons/folder.svg';
+import { useDispatch } from '../../store/dispatch';
+import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
+import { FileManagerItem } from '../../types';
+
+import styles from './ListItem.module.scss';
 
 type ListItemProps = {
   item: FileManagerItem;

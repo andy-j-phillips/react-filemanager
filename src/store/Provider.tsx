@@ -1,5 +1,7 @@
-import { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode } from 'react';
+
 import { Store } from '../types';
+
 import { DEFAULT_STATE } from './consts';
 
 type TProviderContext = {

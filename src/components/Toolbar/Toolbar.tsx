@@ -1,4 +1,5 @@
 import { getState } from '../../store/Provider';
+
 import styles from './Toolbar.module.scss';
 
 const Toolbar = () => {

@@ -1,6 +1,7 @@
+import directorySelector from '../../store/selectors/directorySelector';
 import ListItem from '../ListItem';
 import ListHeaderItem from '../ListItem/ListHeaderItem';
-import directorySelector from '../../store/selectors/directorySelector';
+
 import styles from './Directory.module.scss';
 
 const Directory = () => {
