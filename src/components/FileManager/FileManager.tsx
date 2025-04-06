@@ -4,7 +4,7 @@ import { Provider } from '../../store/Provider';
 import { DirectoryItem, DisplayColumns } from '../../types';
 import styles from './FileManager.module.scss';
 
-type FileManagerProps = {
+export type FileManagerProps = {
   directory: DirectoryItem;
   displayColumns: DisplayColumns;
 };
