@@ -45,6 +45,6 @@ export const useProviderContext = () => {
   return context;
 };
 
-export const getState = () => {
-  return useProviderContext().state;
+export const useSelector = (selector: (store: Store) => Partial<Store>) => {
+  return selector(useProviderContext().state);
 };

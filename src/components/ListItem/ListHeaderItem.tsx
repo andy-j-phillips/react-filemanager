@@ -1,14 +1,15 @@
+import { useSelector } from '../../store/Provider';
 import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
 
 import styles from './ListItem.module.scss';
 
 const ListHeaderItem = () => {
-  const displayColumns = displayColumnsSelector();
+  const displayColumns = useSelector(displayColumnsSelector);
 
   return (
     <li className={styles.listItemHeader}>
       {['Name', ...displayColumns].map((col) => (
-        <div>{col}</div>
+        <div key={col}>{col}</div>
       ))}
     </li>
   );

@@ -42,12 +42,12 @@ export default [
       },
     },
     rules: {
-      // ...ts.configs.recommended.rules,
-      // ...react.configs.recommended.rules,
-      // ...reactHooks.configs.recommended.rules,
-      // ...importPlugin.configs.recommended.rules,
-      // ...importPlugin.configs.typescript.rules,
-      // ...prettier.configs.recommended.rules,
+      ...ts.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...importPlugin.configs.recommended.rules,
+      ...importPlugin.configs.typescript.rules,
+      ...prettier.configs.recommended.rules,
 
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [

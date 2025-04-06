@@ -1,9 +1,9 @@
-import { getState } from '../../store/Provider';
+import { useSelector } from '../../store/Provider';
 
 import styles from './Toolbar.module.scss';
 
 const Toolbar = () => {
-  const { directory } = getState();
+  const { directory } = useSelector((state) => state);
 
   return <div className={styles.toolbar}>{directory.name}</div>;
 };

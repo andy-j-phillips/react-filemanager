@@ -1,5 +1,5 @@
-import { getState } from '../../store/Provider';
+import { Store } from '../../types';
 
-const directorySelector = () => getState().directory;
+const directorySelector = (store: Store) => store.directory;
 
 export default directorySelector;
