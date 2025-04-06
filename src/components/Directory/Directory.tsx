@@ -1,5 +1,5 @@
 import directorySelector from '../../store/selectors/directorySelector';
-import useSelector from '../../store/useSelector';
+import useSelector from '../../store/selector';
 import ListItem from '../ListItem';
 import ListHeaderItem from '../ListItem/ListHeaderItem';
 

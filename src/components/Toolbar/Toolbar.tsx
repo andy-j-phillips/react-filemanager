@@ -1,4 +1,4 @@
-import useSelector from '../../store/useSelector';
+import useSelector from '../../store/selector';
 
 import styles from './Toolbar.module.scss';
 

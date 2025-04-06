@@ -1,5 +1,5 @@
 import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
-import useSelector from '../../store/useSelector';
+import useSelector from '../../store/selector';
 
 import styles from './ListItem.module.scss';
 
