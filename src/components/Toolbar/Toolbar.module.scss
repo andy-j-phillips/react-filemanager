@@ -2,5 +2,18 @@
   border-bottom: 1px solid #bebebe;
   padding: 12px;
   display: flex;
-  justify-content: center;
+}
+
+.directionBtnContainer {
+  margin-right: 20px;
+}
+
+.directionBtn {
+  width: 14px;
+  height: 14px;
+}
+
+.directionBtnLeft {
+  transform: rotate(180deg);
+  margin-right: 20px;
 }
