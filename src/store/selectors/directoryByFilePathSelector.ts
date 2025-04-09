@@ -1,12 +1,15 @@
-import { Store } from '../../types';
+import { DirectoryItem, Store } from '../../types';
 
 const directoryByFilePathSelector = (pathIndex: number) => (store: Store) => {
   const { fileSystemPath, fileSystem } = store;
-  const directory = fileSystemPath.reduce((acc, cur, index) => {
-    if (index > pathIndex) {
+  const [, ...paths] = fileSystemPath;
+  const directory = paths.reduce<DirectoryItem>((acc, cur, index) => {
+    if (index > pathIndex - 1) {
       return acc;
     }
-    return acc[cur];
+
+    // TODO cache children as object rather than iterate on each CD
+    return acc.children.find((item) => item.name === cur);
   }, fileSystem);
   return directory;
 };
