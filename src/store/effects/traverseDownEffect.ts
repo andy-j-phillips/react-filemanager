@@ -1,11 +1,13 @@
 import { Store, DirectoryItem } from '../../types';
 
-const traverseDownEffect = (directoryName: string, isNew: boolean) => (store: Store) => {
+const traverseDownEffect = (directoryName?: string) => (store: Store) => {
+  const isNew = !!directoryName;
+  const targetDirectoryName = directoryName || store.fileSystemPath[store.curDirectoryIndex + 1];
   const { fileSystemPath, curDirectoryIndex, curDirectory } = store;
   const curPath = [...fileSystemPath];
   // TODO cache children as object rather than iterate on each CD
   const newDirectory = curDirectory.children.find(
-    (item) => item.name === directoryName,
+    (item) => item.name === targetDirectoryName,
   ) as DirectoryItem;
 
   if (newDirectory) {

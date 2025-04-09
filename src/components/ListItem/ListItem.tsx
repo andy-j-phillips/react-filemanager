@@ -18,7 +18,7 @@ const ListItem = ({ item }: ListItemProps) => {
 
   const handleDoubleClick = () => {
     if (item.type === 'directory') {
-      dispatch(traverseDownEffect(item.name, true));
+      dispatch(traverseDownEffect(item.name));
     } else {
       // eslint-disable-next-line no-undef
       alert('File clicked'); // TODO
