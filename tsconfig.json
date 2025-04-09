@@ -9,7 +9,7 @@
     "strict": true,
     "lib": ["esnext", "dom"],
     "allowSyntheticDefaultImports": true,
-    "typeRoots": ["./types"],
+    "typeRoots": ["./types", "./node_modules/@types"],
     "outDir": "dist/esm",
     "declarationDir": "dist/esm/types"
   },
