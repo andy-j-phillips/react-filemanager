@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
-import { Store } from '../types';
+import { FileManagerProps, Store } from '../types';
 
 import { DEFAULT_STATE } from './consts';
 
@@ -19,9 +19,17 @@ export const Provider = ({
   initialValue,
 }: {
   children: ReactNode;
-  initialValue: Store;
+  initialValue: FileManagerProps;
 }) => {
-  const [state, setState] = useState(initialValue);
+  const { directory, ...restInitValues } = initialValue;
+
+  const [state, setState] = useState({
+    ...restInitValues,
+    curDirectory: directory,
+    fileSystem: directory,
+    fileSystemPath: [directory.name],
+    curDirectoryIndex: 0,
+  });
 
   const setContextState: React.Dispatch<React.SetStateAction<Store>> = (
     newStateOrSetter: React.SetStateAction<Store>,

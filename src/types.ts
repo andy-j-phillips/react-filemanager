@@ -21,6 +21,14 @@ export type FileManagerItemColumns = Record<DisplayColumns[number], string | num
 export type FileManagerItem = FileItem | (DirectoryItem & FileManagerItemColumns);
 
 export type Store = {
+  fileSystem: DirectoryItem;
+  fileSystemPath: string[];
+  curDirectoryIndex: number;
+  curDirectory: DirectoryItem;
+  displayColumns: DisplayColumns;
+};
+
+export type FileManagerProps = {
   directory: DirectoryItem;
   displayColumns: DisplayColumns;
 };

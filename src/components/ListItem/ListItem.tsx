@@ -1,6 +1,7 @@
 import fileIcon from '../../assets/icons/file.svg';
 import folderIcon from '../../assets/icons/folder.svg';
 import { useDispatch } from '../../store/dispatch';
+import traverseDownEffect from '../../store/effects/traverseDownEffect';
 import useSelector from '../../store/selector';
 import displayColumnsSelector from '../../store/selectors/displayColumnsSelector';
 import { FileManagerItem } from '../../types';
@@ -17,7 +18,7 @@ const ListItem = ({ item }: ListItemProps) => {
 
   const handleDoubleClick = () => {
     if (item.type === 'directory') {
-      dispatch(() => ({ directory: item }));
+      dispatch(traverseDownEffect(item.name));
     } else {
       // eslint-disable-next-line no-undef
       alert('File clicked'); // TODO

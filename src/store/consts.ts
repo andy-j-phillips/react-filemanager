@@ -1,15 +1,20 @@
-import { Store } from '../types';
+import { Store, DirectoryItem } from '../types';
+
+const INITIAL_DIRECTORY: DirectoryItem = {
+  id: -1,
+  name: '',
+  path: [],
+  type: 'directory',
+  children: [],
+  created_at: '',
+  kind: 'directory',
+  size: 0,
+};
 
 export const DEFAULT_STATE: Store = {
-  directory: {
-    id: -1,
-    name: '',
-    path: [],
-    type: 'directory',
-    children: [],
-    created_at: '',
-    kind: 'directory',
-    size: 0,
-  },
+  curDirectory: INITIAL_DIRECTORY,
+  fileSystem: INITIAL_DIRECTORY,
+  fileSystemPath: [],
+  curDirectoryIndex: 0,
   displayColumns: [],
 };
