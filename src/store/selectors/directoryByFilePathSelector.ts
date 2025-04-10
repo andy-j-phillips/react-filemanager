@@ -9,7 +9,7 @@ const directoryByFilePathSelector = (pathIndex: number) => (store: Store) => {
     }
 
     // TODO cache children as object rather than iterate on each CD
-    return acc.children.find((item) => item.name === cur);
+    return acc.children.find((item) => item.name === cur) as DirectoryItem;
   }, fileSystem);
   return directory;
 };
